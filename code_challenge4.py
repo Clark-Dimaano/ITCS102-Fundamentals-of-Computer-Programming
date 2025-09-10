@@ -23,7 +23,7 @@ if genre == "1":
 		else:
 			print("\nPlease select again")
 	elif duration.lower() == "long":
-		year = input("What year do you prefe (2000s/2010s)")
+		year = input("What year do you prefe (2000s/2010s):")
 		if year == "2000s":
 			print("We reccomend MPD Psycho")
 		elif year == "2010s":
@@ -49,7 +49,7 @@ elif genre == "2":
 		else:
 				print("\nPlease select again")
 	elif duration.lower() == "long":
-		year = input("What year do you prefer (2000s/2010s)")
+		year = input("What year do you prefer (2000s/2010s):")
 		if year == "2000s":
 			print("We reccomend Eyeshield 21")
 		elif year == "2010s":
@@ -77,7 +77,7 @@ elif genre == "3":
 		else:
 			print("\nPlease select again")
 	elif duration.lower() == "long":
-		year = input("What year do you prefe (2000s/2010s)")
+		year = input("What year do you prefe (2000s/2010s):")
 		if year == "2000s":
 			print("We reccomend Marmalade Boy")
 		elif year == "2010s":
@@ -89,3 +89,4 @@ elif genre == "3":
 else:
 
 	print("\nPlease select again")
+
