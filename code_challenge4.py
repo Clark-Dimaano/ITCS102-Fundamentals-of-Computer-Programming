@@ -1,4 +1,5 @@
-print("1. Horror")
+print("Welcome to Manga Reccomender")
+print("\n1. Horror")
 print("2. Action")
 print("3. Romance")
 genre = input ("\nWhat genre of manga do you want: ")
@@ -86,4 +87,5 @@ elif genre == "3":
 	else:
 		print("\nPlease select again")
 else:
+
 	print("\nPlease select again")
