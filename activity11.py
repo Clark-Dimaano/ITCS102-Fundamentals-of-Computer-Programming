@@ -1,18 +1,18 @@
-temp = eval(input("Enter temperature outside --> "))
+temp = eval(input("Input is the temperature outside --> "))
 
 if temp <= 0:
-	print("Temperature is considered as freezling cold")
+	print("Temperature is hazardly cold")
 elif temp >= 1 and temp <= 20:
-	print("Temperature is considered as extremely cold")
+	print("Temperature is Extremely cold")
 elif temp > 20 and temp <= 30:
-	print("Temperature is considered as cold")
+	print("Temperature is cold")
 elif temp > 30 and temp <= 37:
-	print("Temperature is considered as lukewarm")
+	print("Temperature is lukewarm")
 elif temp > 37 and temp <= 45:
-	print("Temperature is comsidered as hot")
+	print("Temperature is hot")
 elif temp > 45 and temp <= 50:
-	print("Temperature is considered as boilling hot")
-elif temp > 50:
-	print("Temperature is considered as dangerous temperature")
+	print("Temperature is boilling hot")
+elif temp> 50:
+	print("Temperature is dangarous")
 else:
-	print("Temperature Invalid")
+	print("Temperature invalid")
