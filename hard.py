@@ -12,4 +12,4 @@ for i in range(1,loan_period + 1):
     monthly = principal + interest 
 
 
-    print(f"{i}\t|\t{round(principal,2)}\t\t|\t{round(balance,2)}\t\t|\t{round(interest,2)}\t\t|\t{round(monthly,2)}")
+    print(f"{i}\t|\t{round(principal,2)}\t\t|\t{round(balance,2)}\t\t|\t{round(interest,2)}\t\t|\t{round(monthly,2)}\t\t|")
