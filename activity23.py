@@ -10,4 +10,4 @@ GreetWithName('Garcia')
 
 print(f"I want to get the summation of {Funtionwithreturn(8)} ")
 print(f"I want to get the factorial of {factorial(8)} ")
-print(f"I want to get the division factorial and summation is {factorial(8) / Funtionwithreturn(8)} ")
+print(f"The division of factorial and summation is {factorial(8) / Funtionwithreturn(8)} ")

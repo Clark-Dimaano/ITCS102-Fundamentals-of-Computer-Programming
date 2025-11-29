@@ -14,3 +14,14 @@ def factorial(number):
     for x in range(number, 0, -1):
         fact *= x
     return fact
+
+def triangle():
+    for i in range(1,11):
+        for x in range(10,i,-1):
+            print(" ", end = " ")
+        for y in range(1,i):
+            print("*", end = " ")
+        for z in range(1,i):
+            print("*", end = " ")
+        print()
+    
