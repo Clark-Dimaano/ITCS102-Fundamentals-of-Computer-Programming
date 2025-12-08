@@ -20,9 +20,7 @@ while True:
         if select == 'a':
              
         
-            while True:
-                                                                                    
-                os.system('cls')
+            while True:                                                                                    
                 print("============================================================================")
                 
                     
@@ -53,7 +51,7 @@ while True:
                         print("               print(\"Name:\", name, \"Age:\", age)")
                         print("\n               Output: ")
                         print("               Name: Alice, Age: 25 ")
-                        print("\ninput() -    This function allows the program to take input from the user as a string.\n             You can provide a prompt inside the parentheses to guide the user. If you need a number, you usually convert the input using int() or float().")
+                        print("\ninput() -    This function allows the program to take input from the user as a string.\n             You can provide a prompt inside the parentheses to guide the user.\n\t     If you need a number, you usually convert the input using int() or float().")
                         print("               Example: ")
                         print("               age = input(\"Enter your age: \")")
                         print("               print(\"You are\", age, \"years old\")")
@@ -63,13 +61,19 @@ while True:
                         print("\nrange() -    This function generates a sequence of numbers. It is commonly used in for loops. \n\t     You can specify a start, stop, and step value. It does not create a list in memory, which makes it memory-efficient.\n\t       Example:\n\t       for i in range(1,6,1):\n\t           print(i)\
                         \n\n\t       Output:\n\t       1\n\t       2\n\t       3\n\t       4\n\t       5")
                         print("\neval() -    This function takes a string argument containing a valid expression, evaluates it, and returns the result of that expression. \n\t    It can evaluate numbers, arithmetic expressions, lists, tuples, function calls, and more.\n\t       Example:\n\t       x = 3\n\t       y = 4\n\t       print(eval(x * y))\n\n\t     Output:\n\t       12")
+                        print("\nlen() -     Returns the number of items in a collection: for example, characters in a string, elements in a list/tuple/dictionary/set, etc.\n\t    It works for any object that defines a length (i.e. implements the “sequence” or “collection” interface).")
+                        print("\t     Example:\n\t     x = \"Hello\"")   
+                        print("\t     print(len(x))")                    
+                        print("\n\t     Output:")  
+                        print("\t     5")     
                         print("=====================================================================================")
+                        
+
                                 
                     
-                        input("Press any key to go back: ")
-                        continue
-                                                     
+                        input("Press any key to go back: ")                                                    
                         os.system('cls')
+                        continue
                     elif y == '2':
                         print("=====================================================================================")
 
@@ -107,16 +111,16 @@ while True:
                         print("=====================================================================================")               
                         print("The user-defined function is a set of instructions that you create to do a specific job. Instead of writing the same code again and again, you make a function once and call it whenever you need it. You create a function using the (def) keyword, give it a name, and write the code you want it to run\nBasic Structure:\ndef functiuon_name():\n    # code to run")
                         print("=====================================================================================")
-                        input("Press any key tp go back: ") 
+                        input("Press any key to go back: ") 
 
-                    elif y== '2':
+                    elif y == '2':
                         print("====================================")
                         def greet( ):
                             print("Hello! Wellcome to the Python.")
                     
-                            print("\nCode:\n def greet( ):\n    print(\"Hello! Welcome to the Python.\")\n greet( )\n\nOuput:")
-                            greet()
-                            print("\n====================================")
+                        print("\nCode:\n def greet( ):\n    print(\"Hello! Welcome to the Python.\")\n greet( )\n\nOuput:")
+                        greet()
+                        print("\n====================================")
                         input("press any key to go back: ")
                                                
                 else:
@@ -145,7 +149,18 @@ while True:
                 print("\n3.print(\"Hello\\rWorld\")")
                 print("\nOutput:")
                 print("Hello\rWorld")
-                          
+                print("\n4.print(\"C:\\\\Users\\\\User\")")
+                print("\nOutput:")
+                print("C:\\Users\\User")
+                print("\n5.print(\"It\\\'s Python\")")
+                print("\nOutput:")
+                print("It\'s Python")     
+                print("\n6.print(\"\\\"Quote\\\"\")")          
+                print("\nOutput:")           
+                print("\"Quote\"")
+                print("\n7.print(\"123\\b4\")")
+                print("\nOutput:")
+                print("123\b4")
         elif select == 'x':               
                 print("You have exited  the program")
                 break
