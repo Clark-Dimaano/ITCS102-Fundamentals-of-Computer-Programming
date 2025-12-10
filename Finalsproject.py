@@ -11,7 +11,7 @@ while True:
         print("\tA - Functions ")
         print("\tB - Escape Sequence")
         print("\tC - Conditional Statement")
-        print("\tD - List and Dictionary")
+        print("\tD - Data Structure")
         print("\tX - Exit Menu")
         print("============================================")
 
@@ -23,9 +23,7 @@ while True:
              
         
             while True:                                                                                    
-                print("===============FUNCTION===============")
-                
-                    
+                print("===============FUNCTION===============")                   
                 print("\t1 - Built-in Function") 
                 print("\t2 - User-Defined Function")
                 print("\t0 - Back")
@@ -258,7 +256,7 @@ while True:
 
                         if y == '1':
                             print("===============================================DEFINITION===============================================")
-                            print("A loop is a control‑flow structure that allows a program to repeat a block of code multiple times. \nInstead of writing the same code over and over manually, you write it once inside a loop, and the loop \nhandles the repetition.Loops are especially useful when you have a sequence of data (like a list or \nstring) to process,\nor when you want to repeat a task until a certain condition is met.")
+                            print("A loop is a control‑flow structure that allows a program to repeat a block of code multiple times. \nInstead of writing the same code over and over manually, you write it once inside a loop, and the loop \nhandles the repetition.Loops are especially useful when you have a sequence of data (like a list or \nstring) to process, or when you want to repeat a task until a certain condition is met.")
                             print("\nTwo types of loop:")
                             print("for loop -   is used to iterate over a sequence (like a list, tuple, string, or range) or any iterable object. \n             Use afor loop when you know in advance that you want to process every element in a collection, \n             or when you know exactly how many times you want to repeat something (e.g. using range(...)).")
                             print("\nwhile loop -   loop repeats a block of code as long as a condition remains true. Before each iteration, \n               Python checks the condition; if it's True, it runs the block; if it's False, it exits the loop.")
@@ -309,7 +307,34 @@ while True:
                 elif x == '0':
                     while True:
                         break
-                        
+
+        elif select == 'd':
+            while True:
+                print("===============DATA STRUCTURE===============")
+                print("\t1 - Definition")
+                print("\t2 - Examples")
+                print("\t0 - Back")
+                print("============================================")
+                x = input("Enter your choice: ")
+
+            
+                if x == '1':
+                    print("===============================================DEFINITION===============================================")
+                    print("A data structure is a way to store, organize, and manage data so that you can access, modify, and \nmanipulate it efficiently.")
+                    print("\nTypes of data structure:")
+                    print("list -   An ordered, mutable collection of items (which can be of mixed types). You can access items by \n         index (0, 1, 2, ...), add, remove or change items, and the list size can grow or shrink. Good \n         when you need a dynamic collection of elements.")
+                    print("\nCommon List Operations:")
+                    print("\tOperation\t\t\tSyntax\t\t\t\tDescription\t\t")
+                    print("\tAppend\t\t\tlist.insert(index,item)\t\t\tAdds an item to the end")
+                    print("\tInsert\t\t\tlist.insert(index,item)\t\t\tInsert item at specified index")
+                    print("\tRemove\t\t\tlist.remove(index)\t\t\tRemoves first occurence of item")
+                    print("\ndictionary -   A collection of key → value pairs (mapping). Keys must be unique and (usually) of \n               immutable types; values can be anything. Useful when you want to map identifiers to data — \n               for example, mapping names to ages, or IDs to records")
+                    
+                elif x == '2':
+                    pass
+
+                elif x == '0':
+                    break
         elif select == 'x':               
                 print("You have exited  the program")
                 os.system('cls')
