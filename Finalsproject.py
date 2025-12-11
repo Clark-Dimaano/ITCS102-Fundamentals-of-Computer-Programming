@@ -110,9 +110,9 @@ while True:
 
                 elif  x == '2':
                     while True:                      
-                        print("==============================USER DEFINED FUNCTION=====================================")
-                        print("\t1 - Definition\n\t2 - Run the code\n\t0 - Back")
-                        print("===================================================================")
+                        print("===============USER DEFINED FUNCTION===============")
+                        print("\t1 - Definition\n\t2 - Example\n\t0 - Back")
+                        print("===================================================")
                         y = input("Input your choice: ")
                         os.system('cls')
 
@@ -143,23 +143,23 @@ while True:
                 
         elif select == 'b':
             while True:
-                print("===================================================================")
+                print("===============ESCAPE SEQUENCE===============")
                 print("1 - Definition/descriptions\n2 - Examples\n0 - Back")
-                print("===================================================================")
+                print("=============================================")
                 x = input("Input your choice: ")
                 os.system('cls')
                 
                 if x == '1':
-                    print("===============================================DEFINITION===============================================")
+                    print("===============================================DEFINITION/DESCRIPTION===============================================")
                     print("The escape sequence is the sequence of characters that starts with a backslash (`\\`) and is used to\nrepresent special, non‑printable, or control characters inside a string. The backslash tells the\ninterpreter/compiler to interpret the following character(s) differently from its literal meaning.")
                     print("\nHere are the common types of escape sequence:")
                     print("  Sequence        Meaning\n    \\n          New line\n    \\t          Horizontal tab\n    \\r          Carriage reuturn (back to start of line\n    \\\\          Literal backslash\n    \\\'          Single quote '\n    \\\"          Double quote \"\n    \\b          Backspace")
-                    print("========================================================================================================")  
+                    print("====================================================================================================================")  
                     input("press any key to go back: ")
                     os.system('cls')
 
                 elif x == '2':
-                    print("===============================================DEFINITION/DESCRIPTION===============================================")
+                    print("===============================================EXAMPLES===============================================")
                     print("Examples:")          
                     print("\n1.print(\"Hello\\nWorld\")")
                     print("\nOutput:")
@@ -322,17 +322,120 @@ while True:
                     print("===============================================DEFINITION===============================================")
                     print("A data structure is a way to store, organize, and manage data so that you can access, modify, and \nmanipulate it efficiently.")
                     print("\nTypes of data structure:")
-                    print("list -   An ordered, mutable collection of items (which can be of mixed types). You can access items by \n         index (0, 1, 2, ...), add, remove or change items, and the list size can grow or shrink. Good \n         when you need a dynamic collection of elements.")
-                    print("\nCommon List Operations:")
-                    print("\tOperation\t\t\tSyntax\t\t\t\tDescription\t\t")
-                    print("\tAppend\t\t\tlist.insert(index,item)\t\t\tAdds an item to the end")
-                    print("\tInsert\t\t\tlist.insert(index,item)\t\t\tInsert item at specified index")
-                    print("\tRemove\t\t\tlist.remove(index)\t\t\tRemoves first occurence of item")
+                    print("list -   An ordered, mutable collection of items (which can be of mixed types). You can access items by \n         index (0, 1, 2, ...), add, remove or change items, and the list size can grow or shrink. Good \n         when you need a dynamic collection of elements.")          
                     print("\ndictionary -   A collection of key → value pairs (mapping). Keys must be unique and (usually) of \n               immutable types; values can be anything. Useful when you want to map identifiers to data — \n               for example, mapping names to ages, or IDs to records")
-                    
-                elif x == '2':
-                    pass
+                    print("========================================================================================================")   
+                    input("Press any key to go back: ")
 
+                elif x == '2':
+                    print("===============================================EXAMPLE===============================================")
+                    print("Here are the common list operations:")
+                    print("\tOperation\t\t\tSyntax\t\t\t\tDescription\t\t")
+                    print("\tAppend\t\t\tlist.insert(index,item)\t\tAdds an item to the end")
+                    print("\tInsert\t\t\tlist.insert(index,item)\t\tInsert item at specified index")
+                    print("\tRemove\t\t\tlist.remove(index)\t\tRemoves first occurence of item")
+                    print("\tpop\t\t\tlist.pop(index)\t\t\tRemoves and returns item at index")
+                    print("\tsort\t\t\tlist.sort()\t\t\tSorts the list(ascending by default)")
+                    print("\tLength\t\t\tlen(list)\t\t\tReturns number of elements")
+                    print("\tReverse\t\t\tlist.reverse()\t\t\tReverse the list order")
+                    print("\nLet\'s try it:")
+                    print("\t\t\t\tSTUDENT INFORMATION SYSTEM")
+                    list = {}
+                    while True:
+                        print("Select from the following system")
+                        print("A - Add Student")
+                        print("B - Print all sudent info")
+                        print("C - Search Student")
+                        print("D - Delete Student Record")
+                        print("E - Edit Student Record")
+                        print("X - Exit")
+                        choice = input("\nInput your choice here --> ").lower().strip()
+                        os.system('cls')
+
+                        if choice == 'a':
+                            print("ADD STUDENT RECORD")
+                            student_id = input("Input student number --> ")
+                            first_name = input("Input student First name --> ").upper()
+                            last_name = input("Input student Last name --> ").upper()
+                            number = input("Input contact number --> ")
+                            email = input("Input student email --> ")
+
+                            list[student_id] = [first_name, last_name, number, email]
+                            os.system('cls')
+                            print("DATA SAVE SUCCESFULLY")
+                            continue
+
+                        elif choice == 'b':                          
+                            print("PRINTING STUDENT RECORD")      
+                            for id,info in list.items():
+                                print(f"Student id {id} - Record {info}")
+                            continue
+
+                        elif choice == 'c':
+                            print("SEARCH STUDENT RECORD")
+                            search = input("Input here the student ID --> ")
+                            for stud_rec in list.keys():                        
+                                if search in list.keys():
+                                    print("\nRECORD FOUND")
+                                    for id,info in list.items():
+                                        print(f"STUDENT ID - {id}, STUDENT INFO {info}") 
+
+                                else:
+                                    print("STUDENT RECORD NOT FOUND")  
+                                    break
+                            continue
+
+                        elif choice == 'd':
+                            search = input("Input here the student ID --> ").lower()
+                            for stud_rec in list.keys():
+                                print("\nRECORD FOUND")
+                                if search in list.keys():
+                                    for id,info in list.items():
+                                        print(f"STUDENT ID - {id}, STUDENT INFO {info}")
+                                        list.pop(search)
+                                        print("DELETED SUCCESSFULLY")
+                                        break
+
+                                else:
+                                    print("STUDENT RECORD NOT FOUND")  
+                                    continue
+                            continue
+
+                        elif choice == 'e':
+                            search = input("Input Student ID --> ").lower()
+                            
+                            for stud_rec in list.keys():
+                                if search in list.keys():
+                                    print(f"\n\nRECORD FOUND for {search}")
+
+                                for id in list[search]:
+                                    print(f" --{id}")
+
+                                print("\n\t\t\t--EDIT STUDENT INFO--")
+                                student_id = input("Input student number --> ")
+                                first_name = input("Input student First name --> ").upper()
+                                last_name = input("Input student Last name --> ").upper()
+                                number = input("Input contact number --> ")
+                                email = input("Input student email --> ")
+
+                                list[search][0] = first_name
+                                list[search][1] = last_name
+                                list[search][2] = number
+                                list[search][4] = email
+                                print("DATA UPDATED SUCCESSFULLY")  
+                                continue
+
+                        elif choice == 'x':
+                            print("You have exit to the program......")
+                            break
+
+                        else:
+                            print("Please choose correctly.....")
+                            continue
+
+                    print("=====================================================================================================")
+                    input("Press any key to go back: ")
+    
                 elif x == '0':
                     break
         elif select == 'x':               
