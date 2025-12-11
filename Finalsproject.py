@@ -340,7 +340,8 @@ while True:
                     print("\tReverse\t\t\tlist.reverse()\t\t\tReverse the list order")
                     print("\nLet\'s try it:")
                     print("\t\t\t\tSTUDENT INFORMATION SYSTEM")
-                    list = {}
+                    record = {}
+
                     while True:
                         print("Select from the following system")
                         print("A - Add Student")
@@ -353,83 +354,97 @@ while True:
                         os.system('cls')
 
                         if choice == 'a':
+                            os.system('cls')
                             print("ADD STUDENT RECORD")
                             student_id = input("Input student number --> ")
                             first_name = input("Input student First name --> ").upper()
                             last_name = input("Input student Last name --> ").upper()
                             number = input("Input contact number --> ")
                             email = input("Input student email --> ")
+                            
 
-                            list[student_id] = [first_name, last_name, number, email]
+                            record[student_id] = [first_name, last_name, number, email]
                             os.system('cls')
                             print("DATA SAVE SUCCESFULLY")
                             continue
 
-                        elif choice == 'b':                          
+                        elif choice == 'b':                  
+                            os.system('cls')        
                             print("PRINTING STUDENT RECORD")      
-                            for id,info in list.items():
+                            for id,info in record.items():
                                 print(f"Student id {id} - Record {info}")
                             continue
 
                         elif choice == 'c':
+                            os.system('cls')
                             print("SEARCH STUDENT RECORD")
                             search = input("Input here the student ID --> ")
-                            for stud_rec in list.keys():                        
-                                if search in list.keys():
-                                    print("\nRECORD FOUND")
-                                    for id,info in list.items():
-                                        print(f"STUDENT ID - {id}, STUDENT INFO {info}") 
+                            for stud_rec in record.keys():                        
+                                if search in record.keys():
+                                    print("\nRECORD FOUND")                                
+                                    
 
                                 else:
                                     print("STUDENT RECORD NOT FOUND")  
-                                    break
-                            continue
+                                    
+                            
 
                         elif choice == 'd':
-                            search = input("Input here the student ID --> ").lower()
-                            for stud_rec in list.keys():
-                                print("\nRECORD FOUND")
-                                if search in list.keys():
-                                    for id,info in list.items():
-                                        print(f"STUDENT ID - {id}, STUDENT INFO {info}")
-                                        list.pop(search)
-                                        print("DELETED SUCCESSFULLY")
-                                        break
+                            print("DELETE STUDENT RECORD")
+
+                            id_stud = input("Input here the student ID --> ").lower()
+                            for each_stud in record.keys():
+                                if id_stud in record.keys():
+                                    print(f"RECORD FOUND FOR {id_stud}")
+                                    for id in record[id_stud]:
+                                        print(f" ---{id}---")
+
+                                    record.pop(id_stud)
+                                    print("\nDELETED SUCCESSFULLY")
+                                    break
+                                    
 
                                 else:
-                                    print("STUDENT RECORD NOT FOUND")  
+                                    print("STUDENT RECORD NOT FOUND")
                                     continue
-                            continue
+                                    
+                            
 
                         elif choice == 'e':
                             search = input("Input Student ID --> ").lower()
                             
-                            for stud_rec in list.keys():
-                                if search in list.keys():
+                            for stud_rec in record.keys():
+                                if search in record.keys():
                                     print(f"\n\nRECORD FOUND for {search}")
 
-                                for id in list[search]:
-                                    print(f" --{id}")
+                                    for id in record[search]:
+                                        print(f" --{id}--")
 
-                                print("\n\t\t\t--EDIT STUDENT INFO--")
-                                student_id = input("Input student number --> ")
-                                first_name = input("Input student First name --> ").upper()
-                                last_name = input("Input student Last name --> ").upper()
-                                number = input("Input contact number --> ")
-                                email = input("Input student email --> ")
+                                    print("\n\t\t\t--EDIT STUDENT INFO--")
+                                    first_name = input("Input New Student First name --> ").upper()
+                                    last_name = input("Input New Student Last name --> ").upper()
+                                    number = input("Input New Contact number --> ")
+                                    email = input("Input New Student email --> ")
+                                    wala = print("")
 
-                                list[search][0] = first_name
-                                list[search][1] = last_name
-                                list[search][2] = number
-                                list[search][4] = email
-                                print("DATA UPDATED SUCCESSFULLY")  
-                                continue
+                                    record[search][0] = first_name
+                                    record[search][1] = last_name
+                                    record[search][2] = number
+                                    record[search][3] = email
+                                    
+                                    print("DATA UPDATED SUCCESSFULLY")  
+                                    break
+                                
+                                else:
+                                    print("INVALID CHOICE")
 
                         elif choice == 'x':
+                            os.system('cls')
                             print("You have exit to the program......")
                             break
 
                         else:
+                            os.system('cls')
                             print("Please choose correctly.....")
                             continue
 
