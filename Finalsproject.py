@@ -51,22 +51,26 @@ while True:
                             print("               age = 25")
                             print("               print(\"Name:\", name, \"Age:\", age)")
                             print("\n               Output: ")
-                            print("               Name: Alice, Age: 25 ")
+                            input("               Name: Alice, Age: 25 ")
                             print("\ninput() -    This function allows the program to take input from the user as a string. You can provide a\n             prompt inside the parentheses to guide the user. If you need a number, you usually convert\n             the input using int() or float().")
                             print("               Example: ")
                             print("               age = input(\"Enter your age: \")")
                             print("               print(\"You are\", age, \"years old\")")
                             print("\n               Output (if the user enters 20):")
                             print("               Enter your age: 20 ")
-                            print("               You are 20 years old")
-                            print("\nrange() -    This function generates a sequence of numbers. It is commonly used in for loops. You can\n             specify a start, stop, and step value. It does not create a list in memory, which makes\n             it memory-efficient.\n\t       Example:\n\t       for i in range(1,6,1):\n\t           print(i)\
+                            input("               You are 20 years old")
+                            input("\nrange() -    This function generates a sequence of numbers. It is commonly used in for loops. You can\n             specify a start, stop, and step value. It does not create a list in memory, which makes\n             it memory-efficient.\n\t       Example:\n\t       for i in range(1,6,1):\n\t           print(i)\
                         \n\n\t       Output:\n\t       1\n\t       2\n\t       3\n\t       4\n\t       5")
-                            print("\neval() -    This function takes a string argument containing a valid expression, evaluates it, and\n            returns the result of that expression. It can evaluate numbers, arithmetic expressions,\n             lists, tuples, function calls, and more.\n\t       Example:\n\t       x = 3\n\t       y = 4\n\t       print(eval(x * y))\n\n\t     Output:\n\t       12")
+                            print("\neval() -    This function takes a string argument containing a valid expression, evaluates it, and\n            returns the result of that expression. It can evaluate numbers, arithmetic expressions,\n             lists, tuples, function calls, and more.")
+                            print("\t\t\tOperators\t\t\tDescription")
+                            print("\t\t\t+\t\t\tAdds two values together")
+                            print("\t\t\t-\t\t\tSubstract right value from left value")
+                            input("\t       Example:\n\t       x = 3\n\t       y = 4\n\t       print(eval(x * y))\n\n\t     Output:\n\t       12")
                             print("\nlen() -     Returns the number of items in a collection: for example, characters in a string, elements \n            in a list/tuple/dictionary/set, etc.\n\t    It works for any object that defines a length (i.e. implements the “sequence” or\n             “collection” interface).")
                             print("\t     Example:\n\t     x = \"Hello\"")   
                             print("\t     print(len(x))")                    
                             print("\n\t     Output:")  
-                            print("\t     5")     
+                            print("\t     5")  
                             print("=========================================================================================================")       
                             input("Press any key to go back: ")                                                    
                             os.system('cls')
@@ -78,22 +82,26 @@ while True:
                             print("name = \"Alice\"")
                             print("age = 20")
                             print("\nOutput:")
-                            name = 'Alice'
+                            Name = 'Alice'
                             age = 20
-                            print("Name:", name, ",Age:", age)
+                            print("Name:", Name, " ,Age:", age)
+                            input("")
 
                             print("\ninput()")
                             age = input("Enter your age: ")
                             print(f"Your age is {age} years old\n")
-                            print("\nin range():\n(for i in range(1,6,1):)\n\t(print(i))")
-                            for i in range(1,6,1):
+                            print("\nin range():")
+                            x = eval(input("Welcome space ranger, enter a number to start the countdown: "))
+                            for i in range(x, 0, -1):
                                 print(i)
+                            print("\nLiftoff!!!!!")
+                            
                             print("\neval()")
                             print("Input a number to multiply:\nx * y = \n")              
                             x = eval(input("x = "))
                             y = eval(input("y = "))
                             ans = x * y 
-                            print(f"\nThe answer from what you input is {ans}")
+                            print(f"\nThe product from what you input is {ans}")
                             print("====================================================================")
                             input("Press any key to go back: ")
                             os.system('cls')
@@ -102,6 +110,10 @@ while True:
                         elif y == '0':   
                             os.system('cls')
                             break    
+
+                        else:
+                            os.system('cls')
+                            
                                                                                                                     
                 elif x == '0':                                                        
                     print("Back to menu")
@@ -109,7 +121,8 @@ while True:
                     break          
 
                 elif  x == '2':
-                    while True:                      
+                    while True:   
+                        os.system('cls')                   
                         print("===============USER DEFINED FUNCTION===============")
                         print("\t1 - Definition\n\t2 - Example\n\t0 - Back")
                         print("===================================================")
@@ -118,7 +131,7 @@ while True:
 
                         if y == '1':
                             print("===============================================DEFINITION===============================================")               
-                            print("The user-defined function is a set of instructions that you create to do a specific job. Instead of\nwriting the same code again and again, you make a function once and call it whenever you need it. You\ncreate a function using the (def) keyword, give it a name, and write the code you want it to run\nBasic Structure:\ndef functiuon_name():\n    # code to run")
+                            print("The user-defined function is a set of instructions that you create to do a specific job. Instead of\nwriting the same code again and again, you make a function once and call it whenever you need it. You\ncreate a function using the (def) keyword, give it a name, and write the code you want it to run\n\nBasic Structure:\ndef functiuon_name():\n    # code to run")
                             print("========================================================================================================")
                             input("Press any key to go back: ")
                             os.system('cls')
@@ -152,7 +165,7 @@ while True:
                 if x == '1':
                     print("===============================================DEFINITION/DESCRIPTION===============================================")
                     print("The escape sequence is the sequence of characters that starts with a backslash (`\\`) and is used to\nrepresent special, non‑printable, or control characters inside a string. The backslash tells the\ninterpreter/compiler to interpret the following character(s) differently from its literal meaning.")
-                    print("\nHere are the common types of escape sequence:")
+                    input("\nHere are the common types of escape sequence:")
                     print("  Sequence        Meaning\n    \\n          New line\n    \\t          Horizontal tab\n    \\r          Carriage reuturn (back to start of line\n    \\\\          Literal backslash\n    \\\'          Single quote '\n    \\\"          Double quote \"\n    \\b          Backspace")
                     print("====================================================================================================================")  
                     input("press any key to go back: ")
@@ -199,23 +212,26 @@ while True:
                 print("\t0 - Back")
                 print("====================================================================")
                 x = input("Input your choice: ") 
+                os.system('cls')
 
                 if x == '1':
                     while True:
+                        os.system('cls')
                         print("=====================IF/ELIF & ELSE=========================")
                         print("\t1 - Definition")
                         print("\t2 - Try the code")
                         print("\t0 - Back")
                         print("============================================================")
                         y = input("Input your choice: ")
+                        os.system('cls')
                         
                         if y == '1':
                             print("===============================================DEFINITION===============================================")
-                            print("It is a conditional statement that lets your program make decisions — choose between different blocks of\ncode — depending on whether specified conditions are met or not. In Python, the main keywords used\nfor this are if, elif, and else.")
+                            input("It is a conditional statement that lets your program make decisions — choose between different blocks of\ncode — depending on whether specified conditions are met or not. In Python, the main keywords used\nfor this are if, elif, and else.")
                             print("\nRoles of if/elif/else:")
-                            print("if —   This is the basic conditional. When Python reaches an if, it evaluates the expression (condition)\n       that follows. If that condition evaluates to True, the code block under if executes;\n       if it’s False, Python skip that block.")
-                            print("\nelif -   Short for “else if.” This is used when you want to check additional conditions, but only in the\n          case where the previous if  or earlier elif  evaluated to False. You can have zero or more elif \n          clauses after an if. As soon as one elif condition is found to be True, its block executes, and \n          the rest of the chain (further elifs or else) is skipped")
-                            print("\nelse -   This is the “fallback” or “default” block. It has no condition. It runs only if all previous if\n         and elif conditions in the chain were False. The else clause is optional — you can omit it if you\n         don’t need a default action.")
+                            input("if —   This is the basic conditional. When Python reaches an if, it evaluates the expression (condition)\n       that follows. If that condition evaluates to True, the code block under if executes;\n       if it’s False, Python skip that block.")
+                            input("\nelif -   Short for “else if.” This is used when you want to check additional conditions, but only in the\n          case where the previous if  or earlier elif  evaluated to False. You can have zero or more elif \n          clauses after an if. As soon as one elif condition is found to be True, its block executes, and \n          the rest of the chain (further elifs or else) is skipped")
+                            input("\nelse -   This is the “fallback” or “default” block. It has no condition. It runs only if all previous if\n         and elif conditions in the chain were False. The else clause is optional — you can omit it if you\n         don’t need a default action.")
                             print("\nBasic Structure:")
                             print("if condition1:\n\t# code block executed if condition1 is True")
                             print("elif condition2:\n\t# code block executed if condition1 is False and condition2 is True")
@@ -223,6 +239,7 @@ while True:
                             print("else:\n\t# code block executed if none of the above conditions are True")
                             print("========================================================================================================")
                             input("Press any key to go back: ")
+                            os.system('cls')
 
                         elif y == '2':
                             print("================================TRY THE CODE================================")
@@ -240,7 +257,8 @@ while True:
                                 print("It's cold.")
                             print("====================================================================")
                             input("Press any key to go back: ")
-                        
+                            os.system('cls')
+
                         elif y == '0':
                             break
 
@@ -256,8 +274,8 @@ while True:
 
                         if y == '1':
                             print("===============================================DEFINITION===============================================")
-                            print("A loop is a control‑flow structure that allows a program to repeat a block of code multiple times. \nInstead of writing the same code over and over manually, you write it once inside a loop, and the loop \nhandles the repetition.Loops are especially useful when you have a sequence of data (like a list or \nstring) to process, or when you want to repeat a task until a certain condition is met.")
-                            print("\nTwo types of loop:")
+                            input("A loop is a control‑flow structure that allows a program to repeat a block of code multiple times. \nInstead of writing the same code over and over manually, you write it once inside a loop, and the loop \nhandles the repetition.Loops are especially useful when you have a sequence of data (like a list or \nstring) to process, or when you want to repeat a task until a certain condition is met.")
+                            input("\nTypes of loop:")
                             print("for loop -   is used to iterate over a sequence (like a list, tuple, string, or range) or any iterable object. \n             Use afor loop when you know in advance that you want to process every element in a collection, \n             or when you know exactly how many times you want to repeat something (e.g. using range(...)).")
                             print("\nwhile loop -   loop repeats a block of code as long as a condition remains true. Before each iteration, \n               Python checks the condition; if it's True, it runs the block; if it's False, it exits the loop.")
                             print("\nBasic Structure:")
@@ -269,6 +287,7 @@ while True:
                             print("\t# code block (body of the loop)")
                             print("========================================================================================================")
                             input("Press any key to go back: ")
+                            os.system('cls')
                         
                         elif y == '2':
                             fruits = ["apples", "banana", "avocado"]
@@ -296,6 +315,7 @@ while True:
                                     continue
                             print("================================================================")
                             input("Press any key to go back: ")
+                            os.system('cls')
                             
                         elif y == '0':
                             break   
@@ -316,6 +336,7 @@ while True:
                 print("\t0 - Back")
                 print("============================================")
                 x = input("Enter your choice: ")
+                os.system('cls')
 
             
                 if x == '1':
@@ -326,139 +347,201 @@ while True:
                     print("\ndictionary -   A collection of key → value pairs (mapping). Keys must be unique and (usually) of \n               immutable types; values can be anything. Useful when you want to map identifiers to data — \n               for example, mapping names to ages, or IDs to records")
                     print("========================================================================================================")   
                     input("Press any key to go back: ")
+                    os.system('cls')
 
                 elif x == '2':
-                    print("===============================================EXAMPLE===============================================")
-                    print("Here are the common list operations:")
-                    print("\tOperation\t\t\tSyntax\t\t\t\tDescription\t\t")
-                    print("\tAppend\t\t\tlist.insert(index,item)\t\tAdds an item to the end")
-                    print("\tInsert\t\t\tlist.insert(index,item)\t\tInsert item at specified index")
-                    print("\tRemove\t\t\tlist.remove(index)\t\tRemoves first occurence of item")
-                    print("\tpop\t\t\tlist.pop(index)\t\t\tRemoves and returns item at index")
-                    print("\tsort\t\t\tlist.sort()\t\t\tSorts the list(ascending by default)")
-                    print("\tLength\t\t\tlen(list)\t\t\tReturns number of elements")
-                    print("\tReverse\t\t\tlist.reverse()\t\t\tReverse the list order")
-                    print("\nLet\'s try it:")
-                    print("\t\t\t\tSTUDENT INFORMATION SYSTEM")
-                    record = {}
-
+                    
+                    def operation():   
+                        print("===============================================EXAMPLE===============================================")
+                        print("Here are the common list operations:")
+                        print("\tOperation\t\t\tSyntax\t\t\t\tDescription\t\t")
+                        print("\tAppend\t\t\tlist.insert(index,item)\t\tAdds an item to the end")
+                        print("\tInsert\t\t\tlist.insert(index,item)\t\tInsert item at specified index")
+                        print("\tRemove\t\t\tlist.remove(index)\t\tRemoves first occurence of item")
+                        print("\tpop\t\t\tlist.pop(index)\t\t\tRemoves and returns item at index")
+                        print("\tsort\t\t\tlist.sort()\t\t\tSorts the list(ascending by default)")
+                        print("\tLength\t\t\tlen(list)\t\t\tReturns number of elements")
+                        print("\tReverse\t\t\tlist.reverse()\t\t\tReverse the list order")
+                        print("\nLet\'s try it:")
+                  
+                    prutas = []
+                      
+                     
                     while True:
-                        print("Select from the following system")
-                        print("A - Add Student")
-                        print("B - Print all sudent info")
-                        print("C - Search Student")
-                        print("D - Delete Student Record")
-                        print("E - Edit Student Record")
-                        print("X - Exit")
-                        choice = input("\nInput your choice here --> ").lower().strip()
-                        os.system('cls')
-
-                        if choice == 'a':
+                        operation()
+                        print("list.apped():")                                               
+                        fruit = input("Add any fruit that you like --> ")   
+                        prutas.append(fruit)
+                        print(f"\nList = {prutas}")
+                        
+                        con = input("Continue?: ")
+                        if con == 'yes':
                             os.system('cls')
-                            print("ADD STUDENT RECORD")
-                            student_id = input("Input student number --> ")
-                            first_name = input("Input student First name --> ").upper()
-                            last_name = input("Input student Last name --> ").upper()
-                            number = input("Input contact number --> ")
-                            email = input("Input student email --> ")
-                            
-
-                            record[student_id] = [first_name, last_name, number, email]
+                            pass
+                        
+                        elif con == 'no':
                             os.system('cls')
-                            print("DATA SAVE SUCCESFULLY")
-                            continue
-
-                        elif choice == 'b':                  
-                            os.system('cls')        
-                            print("PRINTING STUDENT RECORD")      
-                            for id,info in record.items():
-                                print(f"Student id {id} - Record {info}")
-                            continue
-
-                        elif choice == 'c':
-                            os.system('cls')
-                            print("SEARCH STUDENT RECORD")
-                            search = input("Input here the student ID --> ")
-                            for stud_rec in record.keys():                        
-                                if search in record.keys():
-                                    print("\nRECORD FOUND")                                
-                                    
-
-                                else:
-                                    print("STUDENT RECORD NOT FOUND")  
-                                    
-                            
-
-                        elif choice == 'd':
-                            print("DELETE STUDENT RECORD")
-
-                            id_stud = input("Input here the student ID --> ").lower()
-                            for each_stud in record.keys():
-                                if id_stud in record.keys():
-                                    print(f"RECORD FOUND FOR {id_stud}")
-                                    for id in record[id_stud]:
-                                        print(f" ---{id}---")
-
-                                    record.pop(id_stud)
-                                    print("\nDELETED SUCCESSFULLY")
-                                    break
-                                    
-
-                                else:
-                                    print("STUDENT RECORD NOT FOUND")
-                                    continue
-                                    
-                            
-
-                        elif choice == 'e':
-                            search = input("Input Student ID --> ").lower()
-                            
-                            for stud_rec in record.keys():
-                                if search in record.keys():
-                                    print(f"\n\nRECORD FOUND for {search}")
-
-                                    for id in record[search]:
-                                        print(f" --{id}--")
-
-                                    print("\n\t\t\t--EDIT STUDENT INFO--")
-                                    first_name = input("Input New Student First name --> ").upper()
-                                    last_name = input("Input New Student Last name --> ").upper()
-                                    number = input("Input New Contact number --> ")
-                                    email = input("Input New Student email --> ")
-                                    wala = print("")
-
-                                    record[search][0] = first_name
-                                    record[search][1] = last_name
-                                    record[search][2] = number
-                                    record[search][3] = email
-                                    
-                                    print("DATA UPDATED SUCCESSFULLY")  
-                                    break
-                                
-                                else:
-                                    print("INVALID CHOICE")
-
-                        elif choice == 'x':
-                            os.system('cls')
-                            print("You have exit to the program......")
                             break
 
-                        else:
+
+
+                    # print("\nInsert():")
+                    ins = ["mango","apple","banana"]
+                    # print("List = [\"mango\",\"apple\",\"banana\"]") 
+                    # print("            0      1        2")    
+                    operation()
+                    print("\ninsert():")
+                    print("fruit = [\"mango\",\"apple\",\"banana\"]") 
+                    print("            0      1        2")    
+                    while True:
+                       
+                        
+                        
+            
+                        y = input("Input the fruit you want to add: ")
+                        z = eval(input("Where should we put it: "))
+                        ins.insert(z,y)
+                        
+                        print(f"\nfruit = {ins}")
+                        
+
+                        con = input("\nContinue?: ")
+                        if con == 'yes':
                             os.system('cls')
-                            print("Please choose correctly.....")
-                            continue
+                            operation()
+                            print("\nInsert():")
+
+                        elif con == 'no':
+                            os.system('cls')
+                            break
+
+                    operation()
+                    print("\nremove():")
+                    print("color = [\"red\",\"blue\",\"yellow\",\"orange\"]")
+                    
+                    color = ["red","blue","yellow","orange"]
+                    while True:
+                        
+                    
+                           
+                            
+                        x = input("What color should we remove?: ")
+                        color.remove(x)
+
+                        print(f"\ncolor = {color}")
+
+                        con = input("\nContinue?: ")
+                        if con =='yes':
+                            os.system('cls')
+                            operation()
+                            print("\nremove():")
+                            print(f"\ncolor = {color}")
+                            
+                            
+                        elif con == 'no':
+                            os.system('cls')
+                            break
+
+                    food = ["sinigang","adobo","kare-kare"]
+
+                    operation()
+                    print("\npop():")
+                    print("food = [\"sinigang\",\"adobo\",\"kare-kare\"]")
+                    print("           0          1         2") 
+                    
+                    while True:
+                        
+
+                        x = eval(input("Input here the index that you want to pop: "))
+                        food.pop(x)
+                        print(f"food = {food}")
+
+                        con = input("\nContinue?: ")
+                        if con == 'yes':
+                            print(f"food = {food}")
+
+                            
+
+                        elif con == 'no':
+                            os.system('cls')
+                            break
+                             
+                    num = []
+                    
+                    while True:
+                        operation()
+                        print("list.sort():")
+                        x = input("Enter a random numbers: ")
+                        num.append(x)
+                        print(f"number = {num}")
+                        
+
+                        con = input("\nContinue?: ")
+                        if con == 'yes':
+                            os.system('cls')
+
+                        elif con == 'no':
+                            print("\nHere are the sorted number that you input:")
+                            num.sort()
+                            print(f"number = {num}")
+                            input("")
+                            os.system('cls')
+                            break
+                    
+                    numero = []
+                    operation()
+                    print("list.reverse():")
+                    while True:
+                        x = eval(input("Enter a random number: "))
+                        numero.append(x)
+                        print(f"number = {numero}")
+
+                        more = input("\nAdd more?: ")
+                        if more == 'yes':
+                            os.system('cls')
+                            operation()
+                            print("list.reverse():")
+
+                        elif more == 'no':
+                            print("\nHere are the reversed number that you input:")
+                            numero.reverse()
+                            print(f"number = {numero}")
+                            input("")
+                            os.system('cls')
+                            break
+                    
+                    operation()
+                    print("\nlist.length():")
+                    numbers = []
+                    while True:
+                        x = input("Input a random number: ")
+                        numbers.append(x)
+                        print(f"numbers = {numbers}")
+
+                        more = input("\nAdd more?: ")
+                        if more == 'yes':
+                            os.system('cls')
+                            operation()
+                            print("\nlist.length():")
+
+                        elif more == 'no':
+                            print("\nHere is the length of the numbers that you input:")
+                            print(len(numbers))
+                            break
 
                     print("=====================================================================================================")
                     input("Press any key to go back: ")
+                    os.system('cls')
     
                 elif x == '0':
+                    os.system('cls')
                     break
-        elif select == 'x':               
-                print("You have exited  the program")
-                os.system('cls')
+        elif select == 'x':  
+                os.system('cls')           
+                print("You have exited the program")                
                 break
 
-        else:                                                                                                                      
-                print("Invalid Choice, try again")     
-                os.system('cls')
+        else:
+                os.system('cls')                                                                                                                      
+                print("Invalid Choice, try again")                     
                 continue
