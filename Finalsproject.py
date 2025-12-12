@@ -61,11 +61,16 @@ while True:
                             input("               You are 20 years old")
                             input("\nrange() -    This function generates a sequence of numbers. It is commonly used in for loops. You can\n             specify a start, stop, and step value. It does not create a list in memory, which makes\n             it memory-efficient.\n\t       Example:\n\t       for i in range(1,6,1):\n\t           print(i)\
                         \n\n\t       Output:\n\t       1\n\t       2\n\t       3\n\t       4\n\t       5")
-                            print("\neval() -    This function takes a string argument containing a valid expression, evaluates it, and\n            returns the result of that expression. It can evaluate numbers, arithmetic expressions,\n             lists, tuples, function calls, and more.")
-                            print("\t\t\tOperators\t\t\tDescription")
-                            print("\t\t\t+\t\t\tAdds two values together")
-                            print("\t\t\t-\t\t\tSubstract right value from left value")
-                            input("\t       Example:\n\t       x = 3\n\t       y = 4\n\t       print(eval(x * y))\n\n\t     Output:\n\t       12")
+                            input("\neval() -    This function takes a string argument containing a valid expression, evaluates it, and\n            returns the result of that expression. It can evaluate numbers, arithmetic expressions,\n             lists, tuples, function calls, and more.")
+                            print("\t\tOperators\t\tName\t\t\tDescription")
+                            print("\t\t+\t\tAddition\t\tAdds two values together")
+                            print("\t\t-\t\tSubtraction\t\tSubstract right value from left value")
+                            print("\t\t*\t\tMultiplication\t\tMultiplies two values (a * b)")
+                            print("\t\t/\t\tDivision\t\tDivides left by right returning a float (a / b) ")
+                            print("\t\t//\t\tFloor Division\t\tDivides and returns the integer part (a // b)")
+                            print("\t\t%\t\tModulus(Remainder)\tReturns the remainder of division (a % b)")
+                            input("\t\t**\t\tExponentiation\t\tRaises left value to the power of right (a ** b)")
+                            input("\n\t\t       Example:\n\t\t       x = 3\n\t\t       y = 4\n\t\t       print(eval(x * y))\n\n\t\t     Output:\n\t\t       12")
                             print("\nlen() -     Returns the number of items in a collection: for example, characters in a string, elements \n            in a list/tuple/dictionary/set, etc.\n\t    It works for any object that defines a length (i.e. implements the “sequence” or\n             “collection” interface).")
                             print("\t     Example:\n\t     x = \"Hello\"")   
                             print("\t     print(len(x))")                    
@@ -276,9 +281,9 @@ while True:
                             print("===============================================DEFINITION===============================================")
                             input("A loop is a control‑flow structure that allows a program to repeat a block of code multiple times. \nInstead of writing the same code over and over manually, you write it once inside a loop, and the loop \nhandles the repetition.Loops are especially useful when you have a sequence of data (like a list or \nstring) to process, or when you want to repeat a task until a certain condition is met.")
                             input("\nTypes of loop:")
-                            print("for loop -   is used to iterate over a sequence (like a list, tuple, string, or range) or any iterable object. \n             Use afor loop when you know in advance that you want to process every element in a collection, \n             or when you know exactly how many times you want to repeat something (e.g. using range(...)).")
-                            print("\nwhile loop -   loop repeats a block of code as long as a condition remains true. Before each iteration, \n               Python checks the condition; if it's True, it runs the block; if it's False, it exits the loop.")
-                            print("\nBasic Structure:")
+                            input("for loop -   is used to iterate over a sequence (like a list, tuple, string, or range) or any iterable object. \n             Use afor loop when you know in advance that you want to process every element in a collection, \n             or when you know exactly how many times you want to repeat something (e.g. using range(...)).")
+                            input("\nwhile loop -   loop repeats a block of code as long as a condition remains true. Before each iteration, \n               Python checks the condition; if it's True, it runs the block; if it's False, it exits the loop.")
+                            input("\nBasic Structure:")
                             print("for loop:")
                             print("for variable in sequence:")
                             print("\t# code block (body of the loop)")
@@ -318,10 +323,12 @@ while True:
                             os.system('cls')
                             
                         elif y == '0':
+                            os.system('cls')
                             break   
 
 
                 elif x == '0':
+                    os.system('cls')
                     break
 
                 elif x == '0':
@@ -341,10 +348,10 @@ while True:
             
                 if x == '1':
                     print("===============================================DEFINITION===============================================")
-                    print("A data structure is a way to store, organize, and manage data so that you can access, modify, and \nmanipulate it efficiently.")
-                    print("\nTypes of data structure:")
-                    print("list -   An ordered, mutable collection of items (which can be of mixed types). You can access items by \n         index (0, 1, 2, ...), add, remove or change items, and the list size can grow or shrink. Good \n         when you need a dynamic collection of elements.")          
-                    print("\ndictionary -   A collection of key → value pairs (mapping). Keys must be unique and (usually) of \n               immutable types; values can be anything. Useful when you want to map identifiers to data — \n               for example, mapping names to ages, or IDs to records")
+                    input("A data structure is a way to store, organize, and manage data so that you can access, modify, and \nmanipulate it efficiently.")
+                    input("\nTypes of data structure:")
+                    input("list -   An ordered, mutable collection of items (which can be of mixed types). You can access items by \n         index (0, 1, 2, ...), add, remove or change items, and the list size can grow or shrink. Good \n         when you need a dynamic collection of elements.")          
+                    input("\ndictionary -   A collection of key → value pairs (mapping). Keys must be unique and (usually) of \n               immutable types; values can be anything. Useful when you want to map identifiers to data — \n               for example, mapping names to ages, or IDs to records")
                     print("========================================================================================================")   
                     input("Press any key to go back: ")
                     os.system('cls')
