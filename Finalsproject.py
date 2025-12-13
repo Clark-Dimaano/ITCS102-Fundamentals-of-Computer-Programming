@@ -386,7 +386,7 @@ while True:
                         if con == 'yes':
                             os.system('cls')
                             pass
-                        
+                
                         elif con == 'no':
                             os.system('cls')
                             break
