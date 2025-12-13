@@ -276,6 +276,7 @@ while True:
                         print("\t0 - Back")
                         print("============================================================")
                         y = input("Input your choice: ")
+                        os.system('cls')
 
                         if y == '1':
                             print("===============================================DEFINITION===============================================")
@@ -376,7 +377,7 @@ while True:
                      
                     while True:
                         operation()
-                        print("list.apped():")                                               
+                        print("list.append():")                                               
                         fruit = input("Add any fruit that you like --> ")   
                         prutas.append(fruit)
                         print(f"\nList = {prutas}")
@@ -397,14 +398,13 @@ while True:
                     # print("List = [\"mango\",\"apple\",\"banana\"]") 
                     # print("            0      1        2")    
                     operation()
-                    print("\ninsert():")
+                    print("\nlist.insert():")
                     print("fruit = [\"mango\",\"apple\",\"banana\"]") 
                     print("            0      1        2")    
                     while True:
                        
                         
                         
-            
                         y = input("Input the fruit you want to add: ")
                         z = eval(input("Where should we put it: "))
                         ins.insert(z,y)
@@ -415,15 +415,17 @@ while True:
                         con = input("\nContinue?: ")
                         if con == 'yes':
                             os.system('cls')
+                            
                             operation()
-                            print("\nInsert():")
+                            print("\nlist.Insert():")
+                            print(f"\nfruit = {ins}")
 
                         elif con == 'no':
                             os.system('cls')
                             break
 
                     operation()
-                    print("\nremove():")
+                    print("\nlist.remove():")
                     print("color = [\"red\",\"blue\",\"yellow\",\"orange\"]")
                     
                     color = ["red","blue","yellow","orange"]
@@ -441,7 +443,7 @@ while True:
                         if con =='yes':
                             os.system('cls')
                             operation()
-                            print("\nremove():")
+                            print("\nlist.remove():")
                             print(f"\ncolor = {color}")
                             
                             
@@ -452,7 +454,7 @@ while True:
                     food = ["sinigang","adobo","kare-kare"]
 
                     operation()
-                    print("\npop():")
+                    print("\nlist.pop():")
                     print("food = [\"sinigang\",\"adobo\",\"kare-kare\"]")
                     print("           0          1         2") 
                     
@@ -461,13 +463,16 @@ while True:
 
                         x = eval(input("Input here the index that you want to pop: "))
                         food.pop(x)
-                        print(f"food = {food}")
+                        print(f"\nfood = {food}")
 
                         con = input("\nContinue?: ")
                         if con == 'yes':
+                            os.system('cls')
+                            operation()
+                            print("\npop():")
                             print(f"food = {food}")
 
-                            
+            
 
                         elif con == 'no':
                             os.system('cls')
